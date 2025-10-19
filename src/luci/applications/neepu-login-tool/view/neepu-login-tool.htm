@@ -1,0 +1,41 @@
+<%+header%>
+
+<h2><%:NEEPU Login Tool%></h2>
+
+<form method="post" action="<%=luci.dispatcher.build_url("admin/services/neepu-login-tool/submit")%>">
+    <div class="cbi-section">
+        <div class="cbi-section-node">
+            <div class="cbi-value">
+                <label class="cbi-value-title"><%:Account%></label>
+                <div class="cbi-value-field">
+                    <input type="text" name="account" required>
+                </div>
+            </div>
+            
+            <div class="cbi-value">
+                <label class="cbi-value-title"><%:Password%></label>
+                <div class="cbi-value-field">
+                    <input type="password" name="password" required>
+                </div>
+            </div>
+            
+            <div class="cbi-value">
+                <label class="cbi-value-title"><%:ISP%></label>
+                <div class="cbi-value-field">
+                    <select name="isp" required>
+                        <option value="联通"><%:China Unicom%></option>
+                        <option value="移动"><%:China Mobile%></option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="cbi-value">
+                <div class="cbi-value-field">
+                    <input type="submit" value="<%:Submit%>">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<%+footer%>
